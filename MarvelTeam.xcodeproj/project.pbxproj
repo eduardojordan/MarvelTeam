@@ -16,6 +16,7 @@
 		186847A427A459FE009ACA2F /* MarvelTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847A327A459FE009ACA2F /* MarvelTeamTests.swift */; };
 		186847AE27A459FE009ACA2F /* MarvelTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847AD27A459FE009ACA2F /* MarvelTeamUITests.swift */; };
 		186847B027A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847AF27A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift */; };
+		186847CA27A4653C009ACA2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847C927A4653C009ACA2F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		186847A927A459FE009ACA2F /* MarvelTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186847AD27A459FE009ACA2F /* MarvelTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTeamUITests.swift; sourceTree = "<group>"; };
 		186847AF27A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTeamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		186847C927A4653C009ACA2F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		186847BC27A45B06009ACA2F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				186847C927A4653C009ACA2F /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				1868478E27A459F7009ACA2F /* ViewController.swift in Sources */,
 				1868479427A459F7009ACA2F /* MarvelTeam.xcdatamodeld in Sources */,
 				1868478A27A459F7009ACA2F /* AppDelegate.swift in Sources */,
+				186847CA27A4653C009ACA2F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
