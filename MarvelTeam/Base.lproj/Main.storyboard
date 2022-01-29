@@ -141,39 +141,6 @@
             <point key="canvasLocation" x="1748" y="814"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="qSz-HF-OTm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hGX-Om-aJU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3qs-yo-ijy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                        <color key="barTintColor" systemColor="systemRedColor"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uuf-cW-0v9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2391" y="1825"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cUZ-fp-JZa">
-            <objects>
-                <viewController id="ZmH-iM-8qM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WN0-OZ-aht">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8fM-lm-4uQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rx2-gS-Le8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cuw-nt-6oN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="1576.3392857142856"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="qMx-2u-w3X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbM-0A-wWB" sceneMemberID="viewController">
@@ -194,9 +161,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -25,8 +25,6 @@
 		1868479627A459FD009ACA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1868479527A459FD009ACA2F /* Assets.xcassets */; };
 		1868479927A459FD009ACA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1868479727A459FD009ACA2F /* LaunchScreen.storyboard */; };
 		186847A427A459FE009ACA2F /* MarvelTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847A327A459FE009ACA2F /* MarvelTeamTests.swift */; };
-		186847AE27A459FE009ACA2F /* MarvelTeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847AD27A459FE009ACA2F /* MarvelTeamUITests.swift */; };
-		186847B027A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847AF27A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift */; };
 		186847CA27A4653C009ACA2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847C927A4653C009ACA2F /* Constants.swift */; };
 		186847CC27A467F1009ACA2F /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847CB27A467F1009ACA2F /* MarvelAPI.swift */; };
 		186847CE27A46892009ACA2F /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847CD27A46892009ACA2F /* Characters.swift */; };
@@ -78,8 +76,6 @@
 		1868479F27A459FE009ACA2F /* MarvelTeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186847A327A459FE009ACA2F /* MarvelTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTeamTests.swift; sourceTree = "<group>"; };
 		186847A927A459FE009ACA2F /* MarvelTeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelTeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		186847AD27A459FE009ACA2F /* MarvelTeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTeamUITests.swift; sourceTree = "<group>"; };
-		186847AF27A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelTeamUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		186847C927A4653C009ACA2F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		186847CB27A467F1009ACA2F /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
 		186847CD27A46892009ACA2F /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 			children = (
 				1868478827A459F7009ACA2F /* MarvelTeam */,
 				186847A227A459FE009ACA2F /* MarvelTeamTests */,
-				186847AC27A459FE009ACA2F /* MarvelTeamUITests */,
 				1868478727A459F7009ACA2F /* Products */,
 				6AEEEC0D0DA30AB41EB7944E /* Pods */,
 				870E852774B786969C4B5CB8 /* Frameworks */,
@@ -167,15 +162,6 @@
 				186847A327A459FE009ACA2F /* MarvelTeamTests.swift */,
 			);
 			path = MarvelTeamTests;
-			sourceTree = "<group>";
-		};
-		186847AC27A459FE009ACA2F /* MarvelTeamUITests */ = {
-			isa = PBXGroup;
-			children = (
-				186847AD27A459FE009ACA2F /* MarvelTeamUITests.swift */,
-				186847AF27A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift */,
-			);
-			path = MarvelTeamUITests;
 			sourceTree = "<group>";
 		};
 		186847BC27A45B06009ACA2F /* Constants */ = {
@@ -572,8 +558,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186847B027A459FE009ACA2F /* MarvelTeamUITestsLaunchTests.swift in Sources */,
-				186847AE27A459FE009ACA2F /* MarvelTeamUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -756,6 +740,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -767,7 +752,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -786,6 +771,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -797,7 +783,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
