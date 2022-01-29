@@ -32,7 +32,6 @@ class DetailViewController: UIViewController {
     
     func setupLabel() {
         lblName.font = UIFont(name: "BebasNeue-Regular", size: 22)
-//        lblDescription.font = UIFont(name: "Antonio-Medium", size: 17)
         lblDescription.numberOfLines = 0
         lblDescription.lineBreakMode = .byWordWrapping
         lblName.text = getName
@@ -40,7 +39,7 @@ class DetailViewController: UIViewController {
         
         if getDescription! == "" {
             lblDescription.text = localizedString("text_image_empty")
-            lblDescription.textColor = UIColor.gray
+            lblDescription.textColor = UIColor.white
         } else {
             lblDescription.text = getDescription
             lblName.textColor = UIColor.white
@@ -50,11 +49,11 @@ class DetailViewController: UIViewController {
     }
     
     func setupImage() {
-        let imgData = "\(getImage!)" + "/portrait_xlarge.jpg"
+        let imgData = "\(getImage!)" + Constants.imgExtension
         let url = URL(string: imgData)
         imgCharacter.contentMode = .scaleAspectFill
         if (url == nil || imgData.contains(Constants.imgNotAvailable))  {
-            imgCharacter.image = UIImage(named: "ImageNotAvailable2")
+            imgCharacter.image = UIImage(named: Constants.imgNotAvailable)
         } else {
             imgCharacter.image = UIImage(url: URL(string: imgData))
         }

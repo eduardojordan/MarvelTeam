@@ -62,8 +62,7 @@ class CharactersViewController: UIViewController {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if (tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height
-        {
+        if (tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height {
             self.loadMoreData()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -92,9 +91,8 @@ extension CharactersViewController: UITableViewDataSource {
         let imgData = "\(marvelHero.image!)" + "/portrait_xlarge.jpg"
         let url = URL(string: imgData)
         
-        if (url == nil || imgData.contains(Constants.imgNotAvailable)) {
-            print("imgData",imgData)
-            cell.imgChracters?.image = UIImage(named: "ImageNotAvailable2")
+        if (url == nil || imgData.contains(Constants.textImgNotAvailable)) {
+            cell.imgChracters?.image = UIImage(named: Constants.imgNotAvailable)
             cell.imgChracters?.contentMode = .scaleAspectFit
         } else {
             cell.imgChracters?.image = UIImage(url: URL(string: imgData))

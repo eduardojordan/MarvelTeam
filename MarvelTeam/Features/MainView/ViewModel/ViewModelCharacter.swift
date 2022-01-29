@@ -16,7 +16,7 @@ class ViewModelCharacter {
         }
     }
     
-    func retrieveData(page:String) {
+    func retrieveData(page: String) {
         let apiService = MarvelAPI()
         apiService.apiToGetCharacterData(page: page) { characterData in
             switch characterData {
