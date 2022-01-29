@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  MarvelTeam
+
+  Created by Eduardo Jordan on 29/1/22.
+  
+*/
+// MARK: - TEXT
+"text_image_empty" = "Este personaje de marvel no contiene descripción por el momento.";
+
+// MARK: - ERROR
+"error_specific" = "Error especifico";
+"error_generic" = "Error generico";

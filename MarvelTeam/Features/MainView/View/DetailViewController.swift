@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
     
     func setupLabel() {
         lblName.font = UIFont(name: "BebasNeue-Regular", size: 22)
-        lblDescription.font = UIFont(name: "Antonio-Medium", size: 17)
+//        lblDescription.font = UIFont(name: "Antonio-Medium", size: 17)
         lblDescription.numberOfLines = 0
         lblDescription.lineBreakMode = .byWordWrapping
         lblName.text = getName
