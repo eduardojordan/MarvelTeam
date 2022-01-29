@@ -27,11 +27,11 @@ class DetailViewController: UIViewController {
        
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
     }
     
-    func setupNavBar() {
+    private func setupNavBar() {
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         let imageView = UIImageView(frame: CGRect(x: 0, y: -5, width: 270, height: 30))
         imageView.contentMode = .scaleAspectFit
@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         navigationItem.titleView = logoContainer
     }
     
-    func setupLabel() {
+    private func setupLabel() {
         lblName.font = UIFont(name: "BebasNeue-Regular", size: 22)
         lblDescription.numberOfLines = 0
         lblDescription.lineBreakMode = .byWordWrapping
@@ -59,7 +59,7 @@ class DetailViewController: UIViewController {
         
     }
     
-    func setupImage() {
+    private func setupImage() {
         let imgData = "\(getImage!)" + Constants.imgExtension
         let url = URL(string: imgData)
         imgCharacter.contentMode = .scaleAspectFill

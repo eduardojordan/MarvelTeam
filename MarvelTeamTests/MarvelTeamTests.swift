@@ -31,16 +31,6 @@ class MarvelTeamTests: XCTestCase {
         XCTAssertNotNil(viewModelCharacter.characterData)
     }
     
-//    func test_network() {
-//        let api = MarvelAPI()
-//        
-//        api.apiToGetCharacterData(page: 1) { data in
-//            print(data)
-//            
-//            XCTAssertEqual(data., <#T##expression2: Equatable##Equatable#>)
-//        }
-//    }
-    
     
     
 }

@@ -20,53 +20,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B0F4763B-D096-4582-854A-7E6275CEE43D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MarvelTeamTests/MarvelTeamTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "test_network()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B0F4763B-D096-4582-854A-7E6275CEE43D - b11d6bc2c0991f7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MarvelTeam.Characters, MarvelTeam.NetworkError&gt;) -&gt; () in MarvelTeamTests.MarvelTeamTests.test_get_request_withURL() -&gt; ()"
-                  moduleName = "MarvelTeamTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eduardojordan/Desktop/MarvelTeam/MarvelTeamTests/MarvelTeamTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  uuid = "B0F4763B-D096-4582-854A-7E6275CEE43D - b11d6bc2c0991f7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;MarvelTeam.Characters, MarvelTeam.NetworkError&gt;) -&gt; () in MarvelTeamTests.MarvelTeamTests.test_get_request_withURL() -&gt; ()"
-                  moduleName = "MarvelTeamTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eduardojordan/Desktop/MarvelTeam/MarvelTeamTests/MarvelTeamTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

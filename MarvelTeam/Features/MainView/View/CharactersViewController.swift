@@ -25,7 +25,7 @@ class CharactersViewController: UIViewController {
         bind()
     }
     
-    func setupNavBar() {
+    private func setupNavBar() {
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         let imageView = UIImageView(frame: CGRect(x: 0, y: -5, width: 270, height: 30))
         imageView.contentMode = .scaleAspectFit
@@ -35,17 +35,17 @@ class CharactersViewController: UIViewController {
         navigationItem.titleView = logoContainer
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.rowHeight = 250
     }
     
-    func configureView() {
+    private func configureView() {
         activity.startAnimating()
         activity.isHidden = false
         viewModel.retrieveData(page: page)
     }
     
-    func bind() {
+    private func bind() {
         viewModel.refreshData = { [weak self] () in
             DispatchQueue.main.async { [self] in
                 self!.tableView.reloadData()
@@ -55,14 +55,14 @@ class CharactersViewController: UIViewController {
         }
     }
     
-    func loadMoreData() {
+    private func loadMoreData() {
         activity.startAnimating()
         activity.isHidden = false
         page += 100
         viewModel.retrieveData(page: page)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    internal func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if (tableView.contentOffset.y + tableView.frame.size.height) >= tableView.contentSize.height {
             self.loadMoreData()
             DispatchQueue.main.async {
@@ -86,20 +86,19 @@ extension CharactersViewController: UITableViewDataSource {
         
         let marvelHero = viewModel.characterData[indexPath.row]
         
-        cell.selectionStyle = .none
-        cell.nameCharacters.text = marvelHero.name
-        
         let imgData = "\(marvelHero.image!)" + "/portrait_xlarge.jpg"
         let url = URL(string: imgData)
         
         if (url == nil || imgData.contains(Constants.textImgNotAvailable) || imgData.contains(
             "http://i.annihil.us/u/prod/marvel/i/mg/5/")) {
             cell.imgChracters?.image = UIImage(named: Constants.imgNotAvailable)
-            cell.imgChracters?.contentMode = .scaleAspectFit
         } else {
             cell.imgChracters?.image = UIImage(url: URL(string: imgData))
-            cell.imgChracters?.contentMode = .scaleAspectFit
         }
+        
+        cell.imgChracters?.contentMode = .scaleAspectFit
+        cell.selectionStyle = .none
+        cell.nameCharacters.text = marvelHero.name
         
         return cell
     }
