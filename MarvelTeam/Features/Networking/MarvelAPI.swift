@@ -17,7 +17,7 @@ class MarvelAPI {
      private let privateKey = Constants.API_KEY_PRIVATE
      private let publicKey = Constants.API_KEY_PUBLIC
 
-    private func getCredentials() -> String {
+    func getCredentials() -> String {
         let ts = Date().timeIntervalSince1970.description
         let hash = "\(ts)\(privateKey)\(publicKey)".md5()
         let authParams = ["ts": ts, "apikey": publicKey, "hash": hash]
