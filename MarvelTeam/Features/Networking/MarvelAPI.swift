@@ -24,7 +24,7 @@ class MarvelAPI {
         return authParams.queryString!
     }
     
-    func apiToGetCharacterData(page: String, completion : @escaping (Result<Characters, NetworkError>) -> ()){
+    func apiToGetCharacterData(page: Int, completion : @escaping (Result<Characters, NetworkError>) -> ()){
         let sourcesURL = URL(string: basePath + "limit=\(limit)&offset=\(marvelPage)&" + getCredentials())
         URLSession.shared.dataTask(with: sourcesURL!) { (data, urlResponse, error) in
             if let data = data {

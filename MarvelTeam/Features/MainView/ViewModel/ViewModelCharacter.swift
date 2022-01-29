@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewModelCharacter {
+   
+    let apiService = MarvelAPI()
     
     var refreshData = { () -> () in }
     var characterData : [DataCharacter] = [] {
@@ -16,8 +18,10 @@ class ViewModelCharacter {
         }
     }
     
-    func retrieveData(page: String) {
-        let apiService = MarvelAPI()
+    func retrieveData(page: Int?) {
+        guard let page = page else {
+            return
+        }
         apiService.apiToGetCharacterData(page: page) { characterData in
             switch characterData {
             case .success (let character):

@@ -26,22 +26,23 @@ class CharactersViewController: UIViewController {
     }
     
     func setupNavBar() {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 20))
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: -5, width: 270, height: 30))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "LogoMarvel")
         imageView.image = image
-        navigationItem.titleView = imageView
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
     }
     
     func setupTableView() {
         tableView.rowHeight = 250
-        tableView.backgroundColor = UIColor.black
     }
     
     func configureView() {
         activity.startAnimating()
         activity.isHidden = false
-        viewModel.retrieveData(page: String(page))
+        viewModel.retrieveData(page: page)
     }
     
     func bind() {
@@ -58,7 +59,7 @@ class CharactersViewController: UIViewController {
         activity.startAnimating()
         activity.isHidden = false
         page += 100
-        viewModel.retrieveData(page:String(page))
+        viewModel.retrieveData(page: page)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -87,16 +88,17 @@ extension CharactersViewController: UITableViewDataSource {
         
         cell.selectionStyle = .none
         cell.nameCharacters.text = marvelHero.name
-
+        
         let imgData = "\(marvelHero.image!)" + "/portrait_xlarge.jpg"
         let url = URL(string: imgData)
         
-        if (url == nil || imgData.contains(Constants.textImgNotAvailable)) {
+        if (url == nil || imgData.contains(Constants.textImgNotAvailable) || imgData.contains(
+            "http://i.annihil.us/u/prod/marvel/i/mg/5/")) {
             cell.imgChracters?.image = UIImage(named: Constants.imgNotAvailable)
             cell.imgChracters?.contentMode = .scaleAspectFit
         } else {
             cell.imgChracters?.image = UIImage(url: URL(string: imgData))
-            cell.imgChracters?.contentMode = .scaleAspectFill
+            cell.imgChracters?.contentMode = .scaleAspectFit
         }
         
         return cell
@@ -126,6 +128,6 @@ extension CharactersViewController: UITableViewDelegate {
         controller.getImage = marvelHero.image!
         self.navigationController!.pushViewController(controller, animated: true)
     }
-
+    
 }
 

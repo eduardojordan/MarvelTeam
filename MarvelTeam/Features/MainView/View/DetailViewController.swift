@@ -23,11 +23,22 @@ class DetailViewController: UIViewController {
         setupNavigationBar()
         setupLabel()
         setupImage()
+        setupNavBar()
        
     }
     
     func setupNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    func setupNavBar() {
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: -5, width: 270, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "LogoMarvel")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
     }
     
     func setupLabel() {
@@ -52,7 +63,7 @@ class DetailViewController: UIViewController {
         let imgData = "\(getImage!)" + Constants.imgExtension
         let url = URL(string: imgData)
         imgCharacter.contentMode = .scaleAspectFill
-        if (url == nil || imgData.contains(Constants.imgNotAvailable))  {
+        if (url == nil || imgData.contains(Constants.textImgNotAvailable))  {
             imgCharacter.image = UIImage(named: Constants.imgNotAvailable)
         } else {
             imgCharacter.image = UIImage(url: URL(string: imgData))
