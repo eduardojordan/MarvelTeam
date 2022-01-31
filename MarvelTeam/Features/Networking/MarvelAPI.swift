@@ -10,6 +10,7 @@ import CryptoSwift
 import UIKit
 
 class MarvelAPI {
+    
      var marvelPage = 0
      let basePath = "https://gateway.marvel.com/v1/public/characters?"
      let pathCharacters = "/characters?"
@@ -18,21 +19,27 @@ class MarvelAPI {
      private let publicKey = Constants.API_KEY_PUBLIC
 
     func getCredentials() -> String {
-        let ts = Date().timeIntervalSince1970.description
-        let hash = "\(ts)\(privateKey)\(publicKey)".md5()
-        let authParams = ["ts": ts, "apikey": publicKey, "hash": hash]
+        let tsValue = Date().timeIntervalSince1970.description
+        let hash = "\(tsValue)\(privateKey)\(publicKey)".md5()
+        let authParams = ["ts": tsValue, "apikey": publicKey, "hash": hash]
         return authParams.queryString!
     }
     
-    func apiToGetCharacterData(page: Int, completion : @escaping (Result<Characters, NetworkError>) -> ()){
+    func apiToGetCharacterData(page: Int, completion : @escaping (Result<Characters, NetworkError>) -> Void) {
         let sourcesURL = URL(string: basePath + "limit=\(limit)&offset=\(marvelPage)&" + getCredentials())
         URLSession.shared.dataTask(with: sourcesURL!) { (data, urlResponse, error) in
-            if let data = data {
-                let jsonDecoder = JSONDecoder()
-                let character = try! jsonDecoder.decode(Characters.self, from: data)
-                completion(.success(character))
-            } else {
-                completion(.failure(.genericError))
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let statusCode = (urlResponse as? HTTPURLResponse)?.statusCode {
+                if statusCode == 200 {
+                    if let data = data {
+                        let jsonDecoder = JSONDecoder()
+                        let character = try? jsonDecoder.decode(Characters.self, from: data)
+                        completion(.success(character!))
+                    } else {
+                        completion(.failure(.genericError))
+                    }
+                }
             }
         }.resume()
     }

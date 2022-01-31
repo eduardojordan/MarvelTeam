@@ -4,7 +4,7 @@
 //
 //  Created by Eduardo Jordan on 28/1/22.
 //
-
+// swiftlint:disable identifier_name
 import Foundation
 
 class Constants: NSObject {
@@ -27,4 +27,3 @@ class Constants: NSObject {
     static let imgNotAvailable = "ImageNotAvailable2"
   
 }
-

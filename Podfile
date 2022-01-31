@@ -7,6 +7,7 @@ target 'MarvelTeam' do
 
   # Pods for MarvelTeam
 pod 'CryptoSwift', '~> 1.4.0'
+pod 'SwiftLint'
 
   target 'MarvelTeamTests' do
     inherit! :search_paths

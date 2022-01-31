@@ -11,8 +11,8 @@ class ViewModelCharacter {
    
     let apiService = MarvelAPI()
     
-    var refreshData = { () -> () in }
-    var characterData : [DataCharacter] = [] {
+    var refreshData = { () -> Void in }
+    var characterData: [DataCharacter] = [] {
         didSet {
             refreshData()
         }
@@ -24,7 +24,7 @@ class ViewModelCharacter {
         }
         apiService.apiToGetCharacterData(page: page) { characterData in
             switch characterData {
-            case .success (let character):
+            case .success(let character):
                 self.characterData.append(contentsOf: character.data!.results)
             case .failure(let error):
                 if (error == .specificError) {

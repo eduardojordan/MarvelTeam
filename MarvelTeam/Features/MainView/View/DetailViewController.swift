@@ -63,7 +63,7 @@ class DetailViewController: UIViewController {
         let imgData = "\(getImage!)" + Constants.imgExtension
         let url = URL(string: imgData)
         imgCharacter.contentMode = .scaleAspectFill
-        if (url == nil || imgData.contains(Constants.textImgNotAvailable))  {
+        if (url == nil || imgData.contains(Constants.textImgNotAvailable)) {
             imgCharacter.image = UIImage(named: Constants.imgNotAvailable)
         } else {
             imgCharacter.image = UIImage(url: URL(string: imgData))

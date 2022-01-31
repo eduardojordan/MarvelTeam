@@ -28,7 +28,7 @@ class CharactersViewController: UIViewController {
         bind()
     }
     
-    private func animation(){
+    private func animation() {
         AVView.contentMode = .scaleAspectFit
         self.AVView.addSubview(checkMarkAnimation)
         checkMarkAnimation.frame = self.AVView.bounds
@@ -96,7 +96,7 @@ extension CharactersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellCharacter) as! CellCellCharactersViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellCharacter) as? CellCellCharactersViewController
         
         let marvelHero = viewModel.characterData[indexPath.row]
         
@@ -105,16 +105,16 @@ extension CharactersViewController: UITableViewDataSource {
         
         if (url == nil || imgData.contains(Constants.textImgNotAvailable) || imgData.contains(
             "http://i.annihil.us/u/prod/marvel/i/mg/5/")) {
-            cell.imgChracters?.image = UIImage(named: Constants.imgNotAvailable)
+            cell!.imgChracters?.image = UIImage(named: Constants.imgNotAvailable)
         } else {
-            cell.imgChracters?.image = UIImage(url: URL(string: imgData))
+            cell!.imgChracters?.image = UIImage(url: URL(string: imgData))
         }
         
-        cell.imgChracters?.contentMode = .scaleAspectFit
-        cell.selectionStyle = .none
-        cell.nameCharacters.text = marvelHero.name
+        cell!.imgChracters?.contentMode = .scaleAspectFit
+        cell!.selectionStyle = .none
+        cell?.nameCharacters.text = marvelHero.name
         
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -135,12 +135,11 @@ extension CharactersViewController: UITableViewDataSource {
 extension CharactersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let marvelHero = viewModel.characterData[indexPath.row]
-        let controller = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        controller.getName = marvelHero.name!
-        controller.getDescription = marvelHero.description!
-        controller.getImage = marvelHero.image!
-        self.navigationController!.pushViewController(controller, animated: true)
+        let controller = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        controller!.getName = marvelHero.name!
+        controller!.getDescription = marvelHero.description!
+        controller!.getImage = marvelHero.image!
+        self.navigationController!.pushViewController(controller!, animated: true)
     }
     
 }
-

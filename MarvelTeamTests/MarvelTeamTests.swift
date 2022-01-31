@@ -42,6 +42,7 @@ class MarvelTeamTests: XCTestCase {
             } else if let statusCode = (urlResponse as? HTTPURLResponse)?.statusCode {
                 if statusCode == 200 {
                     promise.fulfill()
+                    print(data!)
                 } else {
                     XCTFail("Status code: \(statusCode)")
                 }
@@ -51,6 +52,4 @@ class MarvelTeamTests: XCTestCase {
         
         waitForExpectations(timeout: 5, handler: nil)
     }
-    
-    
 }
