@@ -3,7 +3,8 @@
 ![alt text](Capturas_MarvelTeam.jpg "Capturas_MarvelTeam")
 
 
-It is a practice of basic app which makes use of the Marvel API to recreate and create projects based on the best super heroes of Marvel. This app show a list of Marvel character and detail of super hero
+It is a practice of basic app which makes use of the Marvel API to recreate and create projects based on the best super heroes of Marvel. This app show a list of Marvel character and detail of super hero.
+Cocoapods and Swift Package have been included as a practical exercise in the use of libraries as well as swiftlint to maintain correct rules when writing the code
 
 This project is carried out:
 
@@ -11,13 +12,15 @@ This project is carried out:
 - Xcode = v13.2.1
 - iOS 15
 - Design pattern MVVM
-- include Localization
+- Include Localization
 - Include URLSession
-- include extra Fonts
-- include cocoaPods
+- Include extra Fonts
+- Include cocoaPods
 - Include error handler
-- include UnitTest
+- Include UnitTest
 - Include Decodable
+- Include Swift Package
+- Include SwiftLint
 
 
 #Software used
