@@ -11,7 +11,7 @@
         <!--Characters View Controller-->
         <scene sceneID="uoI-SA-jqf">
             <objects>
-                <viewController id="uuT-cE-uCI" customClass="CharactersViewController" customModule="MarvelList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uuT-cE-uCI" customClass="CharactersViewController" customModule="MarvelTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rqJ-7l-Ev5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemRedColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellCharacters" rowHeight="292" id="pK5-Yb-GgN" customClass="CellCellCharactersViewController" customModule="MarvelList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellCharacters" rowHeight="292" id="pK5-Yb-GgN" customClass="CellCellCharactersViewController" customModule="MarvelTeam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pK5-Yb-GgN" id="XGM-g4-E3g">
@@ -67,7 +67,23 @@
                                 <color key="tintColor" red="0.97927719349999998" green="0.78396487240000001" blue="0.37070715430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XO-xj-3VS">
+                                <rect key="frame" x="87" y="414" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAn-rf-VsS" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3Tb-3E-KiS"/>
+                                    <constraint firstAttribute="height" constant="128" id="imd-Fn-6p5"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="509-4A-Csk"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstItem="07n-MC-xzr" firstAttribute="centerY" secondItem="rqJ-7l-Ev5" secondAttribute="centerY" constant="-45" id="LjF-Pq-vNz"/>
@@ -75,11 +91,14 @@
                             <constraint firstItem="07n-MC-xzr" firstAttribute="centerX" secondItem="rqJ-7l-Ev5" secondAttribute="centerX" id="Otu-GZ-hDX"/>
                             <constraint firstItem="fgq-FY-DGD" firstAttribute="leading" secondItem="rqJ-7l-Ev5" secondAttribute="leading" id="rcc-Xc-6h0"/>
                             <constraint firstAttribute="bottom" secondItem="fgq-FY-DGD" secondAttribute="bottom" id="tLx-bF-eCR"/>
+                            <constraint firstItem="7XO-xj-3VS" firstAttribute="centerX" secondItem="rqJ-7l-Ev5" secondAttribute="centerX" id="wsC-cf-2eo"/>
                             <constraint firstItem="fgq-FY-DGD" firstAttribute="trailing" secondItem="rqJ-7l-Ev5" secondAttribute="trailing" id="yIG-d9-Xd2"/>
+                            <constraint firstItem="7XO-xj-3VS" firstAttribute="centerY" secondItem="rqJ-7l-Ev5" secondAttribute="centerY" constant="30" id="yn8-vr-6bl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UKv-Mp-Xb4"/>
                     <connections>
+                        <outlet property="AVView" destination="LAn-rf-VsS" id="fkm-66-V6d"/>
                         <outlet property="activity" destination="07n-MC-xzr" id="Ugx-4I-NC1"/>
                         <outlet property="tableView" destination="fgq-FY-DGD" id="X7B-CI-kaI"/>
                     </connections>
@@ -91,7 +110,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Q2Y-n1-Qug">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="KBd-zv-M8B" customClass="DetailViewController" customModule="MarvelList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="KBd-zv-M8B" customClass="DetailViewController" customModule="MarvelTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DBJ-wC-V7Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

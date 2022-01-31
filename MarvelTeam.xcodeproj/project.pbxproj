@@ -28,6 +28,9 @@
 		186847CA27A4653C009ACA2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847C927A4653C009ACA2F /* Constants.swift */; };
 		186847CC27A467F1009ACA2F /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847CB27A467F1009ACA2F /* MarvelAPI.swift */; };
 		186847CE27A46892009ACA2F /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186847CD27A46892009ACA2F /* Characters.swift */; };
+		18CE990027A869B900D69549 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 18CE98FF27A869B900D69549 /* Lottie */; };
+		18CE990627A8716400D69549 /* loadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 18CE990527A8716400D69549 /* loadingAnimation.json */; };
+		18CE990827A8745800D69549 /* lf30_editor_nq6y8zks.json in Resources */ = {isa = PBXBuildFile; fileRef = 18CE990727A8745700D69549 /* lf30_editor_nq6y8zks.json */; };
 		37C46D89792E76980322FEE4 /* Pods_MarvelTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB519A3294F51EF4DB952 /* Pods_MarvelTeam.framework */; };
 		AA3DA19A161E6AE055066888 /* Pods_MarvelTeam_MarvelTeamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CD93C780A1E68CCF5AD9A4 /* Pods_MarvelTeam_MarvelTeamUITests.framework */; };
 		EEE23037EA0C1C32D42B79B0 /* Pods_MarvelTeamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3E324AAE63B4FFC4E7AFF4 /* Pods_MarvelTeamTests.framework */; };
@@ -79,6 +82,8 @@
 		186847C927A4653C009ACA2F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		186847CB27A467F1009ACA2F /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
 		186847CD27A46892009ACA2F /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		18CE990527A8716400D69549 /* loadingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingAnimation.json; sourceTree = "<group>"; };
+		18CE990727A8745700D69549 /* lf30_editor_nq6y8zks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_nq6y8zks.json; sourceTree = "<group>"; };
 		3C9528955B7CAA349BF786D2 /* Pods-MarvelTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTeam.debug.xcconfig"; path = "Target Support Files/Pods-MarvelTeam/Pods-MarvelTeam.debug.xcconfig"; sourceTree = "<group>"; };
 		549B0FEE1F87FBFCF83E6184 /* Pods-MarvelTeam-MarvelTeamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelTeam-MarvelTeamUITests.release.xcconfig"; path = "Target Support Files/Pods-MarvelTeam-MarvelTeamUITests/Pods-MarvelTeam-MarvelTeamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5D3E324AAE63B4FFC4E7AFF4 /* Pods_MarvelTeamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelTeamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C46D89792E76980322FEE4 /* Pods_MarvelTeam.framework in Frameworks */,
+				18CE990027A869B900D69549 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +182,8 @@
 		186847BD27A45B0A009ACA2F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18CE990727A8745700D69549 /* lf30_editor_nq6y8zks.json */,
+				18CE990527A8716400D69549 /* loadingAnimation.json */,
 				184CFA0527A5354800E9600C /* BebasNeue-Regular.ttf */,
 				1868479527A459FD009ACA2F /* Assets.xcassets */,
 			);
@@ -304,6 +312,9 @@
 			dependencies = (
 			);
 			name = MarvelTeam;
+			packageProductDependencies = (
+				18CE98FF27A869B900D69549 /* Lottie */,
+			);
 			productName = MarvelTeam;
 			productReference = 1868478627A459F7009ACA2F /* MarvelTeam.app */;
 			productType = "com.apple.product-type.application";
@@ -380,6 +391,9 @@
 				es,
 			);
 			mainGroup = 1868477D27A459F7009ACA2F;
+			packageReferences = (
+				18CE98FE27A869B900D69549 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 1868478727A459F7009ACA2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +413,8 @@
 				184CFA0D27A53F7100E9600C /* Localizable.strings in Resources */,
 				184CFA0627A5354800E9600C /* BebasNeue-Regular.ttf in Resources */,
 				1868479927A459FD009ACA2F /* LaunchScreen.storyboard in Resources */,
+				18CE990827A8745800D69549 /* lf30_editor_nq6y8zks.json in Resources */,
+				18CE990627A8716400D69549 /* loadingAnimation.json in Resources */,
 				1868479627A459FD009ACA2F /* Assets.xcassets in Resources */,
 				1868479127A459F7009ACA2F /* Main.storyboard in Resources */,
 			);
@@ -907,6 +923,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18CE98FE27A869B900D69549 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18CE98FF27A869B900D69549 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CE98FE27A869B900D69549 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1868479227A459F7009ACA2F /* MarvelTeam.xcdatamodeld */ = {
