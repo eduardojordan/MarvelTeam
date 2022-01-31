@@ -16,9 +16,9 @@ class CharactersViewController: UIViewController {
     @IBOutlet weak var AVView: UIView!
     static var shared = CharactersViewController()
     
-    var viewModel = ViewModelCharacter()
-    var page = 0
-    let checkMarkAnimation =  AnimationView(name: "loadingAnimation")
+    private var viewModel = ViewModelCharacter()
+    private var page = 0
+    private let checkMarkAnimation =  AnimationView(name: "loadingAnimation")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,7 @@ class CharactersViewController: UIViewController {
         bind()
     }
     
-    func animation(){
-//        let checkMarkAnimation =  AnimationView(name: "lf30_editor_nq6y8zks")
+    private func animation(){
         AVView.contentMode = .scaleAspectFit
         self.AVView.addSubview(checkMarkAnimation)
         checkMarkAnimation.frame = self.AVView.bounds
@@ -64,11 +63,6 @@ class CharactersViewController: UIViewController {
                 self!.tableView.reloadData()
                 self!.activity.stopAnimating()
                 self?.activity.isHidden = true
-//                if self.checkMarkAnimation.isHidden == false{
-//                    self.checkMarkAnimation.isHidden = true
-//                }
-                
-//                self?.checkMarkAnimation.stop()
                 self?.checkMarkAnimation.isHidden = true
                 self?.AVView.isHidden = true
             }
@@ -89,14 +83,6 @@ class CharactersViewController: UIViewController {
                 self.tableView.reloadData()
                 self.activity.stopAnimating()
                 self.activity.isHidden = true
-                
-//                if self.checkMarkAnimation.isHidden == false{
-//                    self.checkMarkAnimation.isHidden = true
-//                }
-//
-//                self.checkMarkAnimation.stop()
-//                self.checkMarkAnimation.isHidden = true
-//                self.AVView.isHidden = true
             }
         }
     }
